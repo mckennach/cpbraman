@@ -1,0 +1,471 @@
+
+/* =================================
+  WEB FONTS & IMPORTS
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,400,400i,500,500i);
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* =================================
+  ELEMENT STYLES
+==================================== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+  width: auto;
+}
+
+#nav-panel-container {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+
+    letter-spacing: .01rem;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 18px;
+}
+
+.material-icons {
+  margin: .5rem;
+}
+
+button {
+    border: none;
+    background: black;
+    color: white;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: inherit;
+    margin-top: 25px;
+    /* float: right; */
+    cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+/* =================================
+    GLOBAL STYLES
+==================================== */
+/* BACKGROUND and TEXT COLORS */
+.background-blue {background: #013243;}
+.background-white {background: white;}
+.text-white {color: white;}
+.text-black {color: black;}
+
+
+/* DIMENSIONS */
+.full-height {height: 100%;}
+.full-width {width: 100%;}
+
+/*POSITIONING*/
+.top {top: 0;}
+.bottom {bottom: 0;}
+.left {left: 0;}
+.right {right: 0;}
+.fixed {position: fixed;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+.hide{display: none;}
+
+/* SCROLL */
+.overflow-hidden {overflow: hidden;}
+.overflow-scroll {overflow: scroll; -webkit-overflow-scrolling: touch;}
+/* TEXT STYLING */
+
+.light-weight{font-weight: 100;}
+.regular-weight{font-weight: 200;}
+
+/* FLEX */
+.flex {display: flex;}
+.flex-column {flex-direction: column;}
+.flex-column-reverse {flex-direction: column-reverse;}
+.flex-row {flex-direction: row;}
+.flex-row-reverse {flex-direction: row-reverse;}
+.center {align-items: center;}
+.space-between {justify-content: space-between;}
+.space-around {justify-content: space-around;}
+
+.header-block {height: 75px;}
+
+/* =================================
+    HEADER
+==================================== */
+
+
+div#header {
+    height: 75px;
+    padding: 0px 20px;
+    z-index: 99;
+}
+
+
+.main-nav-li {
+    font-size: 1.4rem;
+    width: 150px;
+    margin: 0;
+    height: 100%;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.main-nav-li span:before, .dropdown-li span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #F7CA18;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      -moz-tranform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+     -moz-transition: all 0.3s ease-in-out 0s;
+       -o-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+}
+
+.main-nav-li span:hover:before, .active span:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -moz-tranform: scaleX(1);
+       -o-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+
+
+
+div#header-logo {
+    height: 100%;
+}
+
+img.main-nav-logo {
+    width: 300px;
+    top: 10px;
+}
+
+div#dropdown-nav-ul {
+    top: 75px;
+    height: 50px;
+}
+
+.main-nav-dropdown{
+  display: none;
+}
+
+.main-nav-dropdown.opened {
+  display: flex;
+}
+
+div#dropdown-arrow {
+    top: 60px;
+    right: 230px;
+    border-left: 15px solid #f4f7f600;
+    border-right: 15px solid #f4f7f600;
+    border-bottom: 15px solid #ffffff;
+}
+
+/* MOBILE */
+.nav-icon {
+    z-index: 999;
+    width: 45px;
+    height: 25px;
+    /* margin: 50px auto; */
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+
+
+.nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon.open span:nth-child(1) {
+    width: 80%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -2px;
+    left: 8px;
+}
+
+.nav-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-icon.open span:nth-child(3) {
+    width: 80%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 8px;
+}
+
+/* =================================
+    PAGES GENERAL
+==================================== */
+
+.page {
+  width: auto;
+  height: auto;
+}
+
+.container {
+    height: 30%;
+    width: 100%;
+    padding: 0px 65px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.inner-container {
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 30px;
+    width: 600px;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.inner-container h3, section h3{
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+
+.page-section-1,
+.page-section-2 {
+  padding: 40px 40px 70px 40px;
+}
+
+.page-section-1{
+  background: rgba(244, 247, 246, 0.89);
+}
+
+.page-section-2{
+  background: #000000a6;
+  color: white;
+}
+
+.section-text-box {
+    width: 50%;
+
+}
+
+.section-img-box {
+    width: 40%;
+    height: 500px;
+    overflow: hidden;
+
+}
+
+.section-img-box:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    content: "";
+    position: absolute;
+    background-color: #0000002e;
+}
+
+img.section-img {
+    width: 125%;
+    object-fit: cover;
+    
+}
+
+
+
+.page-banner {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 35px;
+}
+
+.page-section-2 .section-img-box {
+  margin-right: 50px;
+}
+
+.page-section-1 .section-text-box {
+  margin-right: 50px;
+}
+
+/* =================================
+    HOME
+==================================== */
+
+#home {
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(../img/img-4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10px;
+}
+
+.home-banner-block {
+  height: 100px;
+}
+
+
+
+/* =================================
+    appraisals
+==================================== */
+
+#appraisals .page-banner{
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(../img/page-banner.jpg);
+  background-size: cover;
+}
+
+.appraisal-row {
+  width: 50%;
+}
+
+.complex-row {
+  background:
+}
+
+
+
+/* =================================
+    Reviews
+==================================== */
+
+div#review-project-container {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background: #000000b5;
+    color: white;
+}
+
+div#review-project-component-list {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-component {
+  background: white;
+    width: 75%;
+    height: 80%;
+    color: black;
+}
+
+.slick-slide {
+  text-align: left;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slick-list{
+  height: 100%;
+}
+
+span.project-text {
+    font-weight: bold;
+}
+
+
+
+
+footer {
+
+    padding: 25px;
+    width: 100%;
+    height: 200px;
+    background: #21343d;
+
+    color: white;
+
+}

@@ -1,0 +1,40 @@
+footer {
+    box-sizing: border-box;
+    padding: 25px;
+    width: 100%;
+    height: 200px;
+    background: #21343d;
+    position: absolute;
+    color: white;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+div#mailing-list {
+    width: 30%;
+    box-sizing: border-box;
+}
+
+
+input[type="text"] {
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+
+div#address {
+    text-align: center;
+    width: 40%;
+}
+
+
+
+div#contact-info {
+    width: 30%;
+    text-align: right;
+}
+
+div#address h2, div#contact-info h2, div#mailing-list h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}

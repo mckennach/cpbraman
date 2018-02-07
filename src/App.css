@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,700');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+.App, #page-wrapper {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.App.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+div#header-block {
+    height: 75px;
+}
+.block {
+    height: 30%;
+    width: 100%;
+    padding: 0px 65px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background: black;
+    color: white;
+    padding: 11px;
+    font-size: 15px;
+    font-weight: inherit;
+    margin-top: 25px;
+    /* float: right; */
+    cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+.hide{
+  display: none;
+}
+
+#page-overlay {
+    width: 100%;
+    height: 100%;
+    background: #000000ad;
+    position: fixed;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home {
+    height: 250%;
+    width: 100%;
+    background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/supermoon1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 10px;
+}
+
+
+section {
+    padding: 30px;
+    height: 35%;
+    width: 100%;
+    background: rgba(244, 247, 246, .85);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.page-section-1 .img-block{
+  width: 40%;
+  /* background-size: contain; */
+  height: 100%;
+  background: url(./img/stock-sky.jpg);
+  background-size: cover;
+}
+
+.page-section-2 .img-block{
+  width: 40%;
+  /* background-size: contain; */
+  height: 100%;
+  background: url(./img/tax.jpg);
+  background-size: cover;
+}
+
+.page-section-3 .img-block{
+  width: 40%;
+  /* background-size: contain; */
+  height: 100%;
+  background: url(./img/estate.jpg);
+  background-size: cover;
+}
+
+.page-section-4 .img-block {
+    width: 40%;
+
+    height: 100%;
+    background: url(/static/media/law.9bc27947.jpg);
+    background-size: cover;
+    background-position: 550px 10px;
+}
+
+
+.page-section-1 {
+  height: auto;
+}
+
+.page-section-2 {
+  background: #000000d6;
+  height: auto;
+  color: white;
+}
+
+.page-section-3 {
+  height: auto;
+}
+
+.page-section-4 {
+  background: #000000d6;
+  height: auto;
+  color: white;
+}
+
+section#cert {
+    background: #000000d6;
+    color: white;
+    height: 35%;
+}
+
+
+#what .img-block {
+    width: 40%;
+    /* background-size: contain; */
+    height: 100%;
+    background: url(./img/stock-apartment.jpg);
+    background-size: cover;
+}
+
+#cert .img-block {
+    width: 72%;
+    /* background-size: contain; */
+    height: 100%;
+    background: url(./img/stock-2.jpg);
+    background-size: cover;
+}
+
+.block .inner-container {
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 30px;
+}
+
+.inner-container {
+    width: 50%;
+    height: 100%;
+    font-size: 1.7vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px 30px;
+}
+
+.inner-container h3 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.page-banner {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 35px;
+}
+
+
+
+.page-container {
+  height: 2500px;
+  width: 100vw;
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/supermoon1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10px;
+}
+
+#appraisals .page-banner{
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/page-banner.jpg);
+  background-size: cover;
+}
+
+div.left-column, div.right-column {
+    width: 50%;
+    height: 100%;
+}
+
+
+
+div.info-container {
+    width: 100%;
+    height: 1800px;
+    display: flex;
+}
+
+div#property-types-container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: #21343d;
+}
+
+div#complexity-problems {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+    height: 65%;
+    color: white;
+    background: #0d1a29;
+}
+
+div#standards {
+    width: 100%;
+    height: 35%;
+    background: #cccccc;
+}
+
+#standards .inner-container {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5vw;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+#appraisals-info-container h2 {
+    margin-bottom: 20px;
+    font-size: 2vw;
+}
+
+#appraisals-info-container h3{
+  font-weight: bold;
+    font-size: 1rem;
+}
+
+div#complexity-problems ul{
+    list-style: none;
+}
+
+div#complexity-problems ul li {
+    margin: 22px 0px;
+
+  }
+div#complexity-problems ul.sublist li{
+  text-indent: 20px;
+}
+
+#property-types-container ul {
+  list-style: none;
+}
+
+#property-types-container ul li {
+    /* text-indent: 20px; */
+    margin: 18px;
+}
+
+
+
+
+
+
+
+#reviews-info-container {
+  height: 700px;
+}
+
+#reviews .page-banner{
+  background-position: 0px 300px;
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/1.jpg);
+  background-size: cover;
+}
+
+
+#emily-braman-reviews {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: #21343d;
+}
+
+#review-process {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: #0d1a29;
+}
+
+#emily-braman-reviews p, #review-process p {
+    margin: 48px 0px;
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+div#review-project-container {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background: #000000b5;
+    color: white;
+}
+
+div#review-project-component-list {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-component {
+  background: white;
+    width: 75%;
+    height: 80%;
+    color: black;
+}
+
+.slick-slide {
+  text-align: left;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slick-list{
+  height: 100%;
+}
+
+span.project-text {
+    font-weight: bold;
+}
+
+#consulting {
+  height: 3500px;
+}
+
+#consulting .page-banner{
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/consulting.jpg);
+  background-size: cover;
+  background-position: 10px;
+}
+
+
+
+
+
+
+#litigation {
+  height: 3500px;
+}
+
+
+#litigation .page-banner{
+  background-image: linear-gradient( rgba(84, 84, 84, 0.73), rgba(126, 126, 126, 0.65) ), url(./img/litigation.jpg);
+  background-size: cover;
+  background-position: 0px 600px;
+}
+
+#litigation .page-section-2, #litigation .page-section-3{
+  height: 500px;
+}
+
+
+.prof-card{
+  margin: 10px;
+}
+
+img.prof-pic {
+    /* width: 194px; */
+    height: 196px;
+    /* position: absolute; */
+    clip: circle(50px);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.prof-name {
+  font-weight: bold;
+}
+
+#clients {
+    height: 500px;
+    flex-direction: column;
+}
+
+#clients h3 {
+    width: 100%;
+    padding: 50p;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: bold;
+    /* float: right; */
+    /* flex: 1; */
+}
+
+#clients .inner-container {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#client-imgs {
+    height: 50% !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    -ms-flex-align: start;
+    align-items: start;
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important;
+}
+
+
+
+
+
+#contact{
+  height: 1
+}
