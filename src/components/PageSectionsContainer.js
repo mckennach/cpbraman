@@ -11,6 +11,7 @@ const PageSectionsContainer = (props) => {
               desc={section.desc}
               desc2={section.desc2}
               imgUrl={section.imgUrl}
+              btn={section.btn}
             />
   });
 

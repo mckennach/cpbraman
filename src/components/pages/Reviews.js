@@ -10,9 +10,9 @@ export default class Reviews extends Component {
 
 
     return (
-      <div className="page-container" id="reviews">
+      <div className="page" id="reviews">
         <div className="page-banner">
-            <h1>Reviews</h1>
+            <h1 className="regular-weight">Reviews</h1>
         </div>
 
 
@@ -27,6 +27,7 @@ export default class Reviews extends Component {
           <ReviewProjects />
         </div>
 
+        <div className="footer-block"></div>
 
       </div>
 

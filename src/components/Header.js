@@ -4,7 +4,8 @@ import {
   Route,
   NavLink
 } from 'react-router-dom';
-import logo2 from '../img/logo-3.svg';
+import logo2 from '../img/logo2.svg';
+import logo3 from '../img/test-logo.svg';
 
 
 
@@ -43,12 +44,12 @@ function Nav(isMobile, navClick){
             <div className="text-white main-nav-li" onClick={dropDown} id="drop-down-toggle"><span className="relative">SERVICES</span>
               <div className="main-nav-dropdown" id="drop-down">
                 <div className="absolute" id="dropdown-arrow"></div>
-                <div className="absolute space-around center flex left background-white text-black full-width" id="dropdown-nav-ul">
-                  <NavLink className="dropdown-li" to="/appraisals"><span className="relative">Appraisal</span></NavLink>
-                  <NavLink className="dropdown-li" to="/reviews"><span className="relative">Reviews</span></NavLink>
-                  <NavLink className="dropdown-li" to="/consulting"><span className="relative" >Consulting</span></NavLink>
-                  <NavLink className="dropdown-li" to="/litigation"><span className="relative">Litigation</span></NavLink>
-                  <NavLink className="dropdown-li" to="/impact-studies"><span className="relative">Impact Studies</span></NavLink>
+                <div className="absolute space-around center flex left text-white full-width" id="dropdown-nav-ul">
+                  <NavLink className="dropdown-li" to="/services/appraisals"><span className="relative">Appraisal</span></NavLink>
+                  <NavLink className="dropdown-li" to="/services/reviews"><span className="relative">Reviews</span></NavLink>
+                  <NavLink className="dropdown-li" to="/services/consulting"><span className="relative" >Consulting</span></NavLink>
+                  <NavLink className="dropdown-li" to="/services/litigation"><span className="relative">Litigation</span></NavLink>
+                  <NavLink className="dropdown-li" to="/services/impact-studies"><span className="relative">Impact Studies</span></NavLink>
                 </div>
               </div>
             </div>
@@ -86,9 +87,12 @@ export default class Header extends Component {
 
 
     return (
-      <div id="header" className="fixed full-width center space-between flex background-blue text-white">
-        <div className="relative" id="header-logo">
+      <div id="header" className="fixed full-width center space-between flex background-light-blue text-white">
+        <div className="relative header-logo" id="header-logo">
           <NavLink className="absolute" to="/"><img className="absolute main-nav-logo" src={logo2} /></NavLink>
+        </div>
+        <div className="relative header-logo-mobile" id="header-logo">
+          <NavLink className="absolute" to="/"><img className="absolute mobile-nav-logo" src={logo3} /></NavLink>
         </div>
         {nav}
 

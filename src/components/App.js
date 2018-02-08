@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
-} from 'react-router-dom'
+  Link,
+  Switch
+} from 'react-router-dom';
 
-import { HomeData, AboutData, AppraisalData, ReviewsData, LitigationData, ConsultingData } from '../data/PageData';
+import { HomeData, AboutData, AppraisalData, ReviewsData, LitigationData, ConsultingData, ImpactStudiesData } from '../data/PageData';
 
 //PAGES
 import Home from './pages/Home';
@@ -14,6 +15,7 @@ import Appraisals from './pages/Appraisals';
 import Reviews from './pages/Reviews';
 import Consulting from './pages/Consulting';
 import Litigation from './pages/Litigation';
+import ImpactStudies from './pages/ImpactStudies';
 import Contact from './pages/Contact';
 
 //COMPONENTS
@@ -110,14 +112,16 @@ class App extends Component {
           <div onClick={this.dropDown} id="page-wrapper">
             <div className="hide" id="page-overlay"></div>
             <div className="header-block"></div>
-            <Route exact path="/" render={() => <Home data={HomeData}/>} />
-            <Route path="/about" render={() => <About data={AboutData}/>}  />
-            <Route path="/appraisals" render={() => <Appraisals data={AppraisalData}/>} />
-            <Route path="/reviews" render={() => <Reviews data={ReviewsData}/>} />
-            <Route path="/consulting" render={() => <Consulting data={ConsultingData}/>} />
-            <Route path="/litigation" render={() => <Litigation data={LitigationData}/>} />
-            <Route path="/contact" component={Contact} />
-
+            <Switch>
+              <Route exact path="/" render={(props) => <Home {...props} data={HomeData}/>} />
+              <Route path="/about" render={() => <About data={AboutData}/>}  />
+              <Route path="/services/appraisals" render={() => <Appraisals data={AppraisalData}/>} />
+              <Route path="/services/reviews" render={() => <Reviews data={ReviewsData}/>} />
+              <Route path="/services/consulting" render={() => <Consulting data={ConsultingData}/>} />
+              <Route path="/services/litigation" render={() => <Litigation data={LitigationData}/>} />
+              <Route path="/services/impact-studies" render={() => <ImpactStudies data={ImpactStudiesData}/>} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
             <Footer />
           </div>
         </div>

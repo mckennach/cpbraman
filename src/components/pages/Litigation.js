@@ -7,15 +7,16 @@ export default class Litigation extends Component {
 
   render() {
     return (
-      <div className="page-container" id="litigation">
+      <div className="page" id="litigation">
         <div className="page-banner">
-          <h1>Litigation</h1>
+          <h1 className="regular-weight">Litigation</h1>
         </div>
 
         <PageSectionsContainer
           data={this.props.data}
         />
 
+        <div className="footer-block"></div>
       </div>
     );
   }
