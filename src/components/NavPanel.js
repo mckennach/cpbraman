@@ -46,24 +46,19 @@ export default class NavPanel extends Component {
           <div id="mobile-nav-container">
             <div id="nav">
             </div>
-            <div  className="nav-icon panel-icon" onClick={navClick}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </div>
 
           </div>
           <nav>
             <ul>
-              <NavLink activeClassName="selected" exact to="/"><li>Home</li></NavLink>
-              <NavLink activeClassName="selected" to="/about"><li>About</li></NavLink>
-              <NavLink activeClassName="selected" to="/appraisals"><li>Appraisals</li></NavLink>
-              <NavLink activeClassName="selected" to="/reviews"><li>Reviews</li></NavLink>
-              <NavLink activeClassName="selected" to="/consulting"><li>Consulting</li></NavLink>
-              <NavLink activeClassName="selected" to="/Litigation"><li>Litigation</li></NavLink>
-
-              <NavLink to="/contact"><li>Contact</li></NavLink>
+              <NavLink exact to="/"><li className="panel-link">Home</li></NavLink>
+              <NavLink to="/about"><li className="panel-link">About</li></NavLink>
+              <NavLink to="/services/appraisals"><li className="panel-link">Appraisals</li></NavLink>
+              <NavLink to="/services/reviews"><li className="panel-link">Reviews</li></NavLink>
+              <NavLink to="/services/consulting"><li className="panel-link">Consulting</li></NavLink>
+              <NavLink to="/services/Litigation"><li className="panel-link">Litigation</li></NavLink>
+              <NavLink to="/services/impact-studies"><li className="panel-link">Impact Studies</li></NavLink>
+              <NavLink to="/contact"><li className="panel-link">Contact</li></NavLink>
             </ul>
           </nav>
         </div>

@@ -75,15 +75,17 @@ class App extends Component {
        this.setState({isMobile: true});
      } else {
        this.setState({isMobile: false, toggled: false});
+       this.toggleNav(this.state.toggled);
      }
     }
 
     toggleNav(toggled) {
+      var wrapper = document.getElementById('page-wrapper');
       this.setState({toggled});
       if(toggled){
-        this.setState({appClasses: 'App no-scroll'});
+        wrapper.classList.add('opened');
       } else {
-        this.setState({appClasses: 'App'});
+        wrapper.classList.remove('opened');
       }
     }
 
@@ -91,12 +93,7 @@ class App extends Component {
       if(this.state.isMobile){
         return
       }
-      var dropDown = document.getElementById('drop-down');
-      var pageOverlay = document.getElementById('page-overlay');
-      if(dropDown.classList.contains('opened')){
-        dropDown.classList.remove('opened');
-        pageOverlay.classList.add('hide');
-      }
+
     }
 
 
@@ -106,10 +103,12 @@ class App extends Component {
     return (
       <Router>
         <div className={this.state.appClasses}>
-          <NavPanel toggleNav={this.toggleNav.bind(this)} isMobile={this.state.isMobile} toggled={this.state.toggled}/>
-          <Header toggleNav={this.toggleNav.bind(this)} toggled={this.state.toggled} isMobile={this.state.isMobile}/>
+        <NavPanel toggleNav={this.toggleNav.bind(this)} isMobile={this.state.isMobile} toggled={this.state.toggled}/>
+
+
 
           <div onClick={this.dropDown} id="page-wrapper">
+            <Header toggleNav={this.toggleNav.bind(this)}  isMobile={this.state.isMobile}/>
             <div className="hide" id="page-overlay"></div>
             <div className="header-block"></div>
             <Switch>

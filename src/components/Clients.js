@@ -17,15 +17,15 @@ export default class Profile extends Component {
 
 
     return (
-      <section className="page-section-3" id="clients">
-        <h3>Clients & Partners</h3>
-        <div id="client-imgs" className="inner-container">
+      <section className="page-section-1" id="clients">
+      <h3 className="clients-header relative">Clients & Partners</h3>
+        <div id="client-imgs" className="flex ">
           <img src={clinic} />
           <img src={metroparks} />
           <img src={logo} />
         </div>
 
-        <div className="inner-container">
+        <div className="see-more-btn">
           <button>See More</button>
         </div>
 

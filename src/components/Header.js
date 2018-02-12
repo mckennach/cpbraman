@@ -10,12 +10,16 @@ import logo3 from '../img/test-logo.svg';
 
 
 function dropDown(isMobile){
-  var dropDown = document.getElementById('drop-down');
+  console.log('hello');
+  var dropDown = document.getElementById('main-drop-down');
   //var pageOverlay = document.getElementById('page-overlay');
+  console.log(dropDown);
+  console.log(dropDown.classList.contains('opened'));
   if(dropDown.classList.contains('opened')){
     dropDown.classList.remove('opened');
     //pageOverlay.classList.add('hide');
   } else{
+
     dropDown.classList.add('opened');
     //pageOverlay.classList.remove('hide');
   }
@@ -42,7 +46,7 @@ function Nav(isMobile, navClick){
           <div id="main-nav-ul">
             <NavLink className="text-white main-nav-li" to="/about" ><span className="relative">ABOUT US</span></NavLink>
             <div className="text-white main-nav-li" onClick={dropDown} id="drop-down-toggle"><span className="relative">SERVICES</span>
-              <div className="main-nav-dropdown" id="drop-down">
+              <div className="main-nav-dropdown" id="main-drop-down">
                 <div className="absolute" id="dropdown-arrow"></div>
                 <div className="absolute space-around center flex left text-white full-width" id="dropdown-nav-ul">
                   <NavLink className="dropdown-li" to="/services/appraisals"><span className="relative">Appraisal</span></NavLink>
@@ -66,14 +70,12 @@ export default class Header extends Component {
     super(props);
     this.state = {
       navClick: this.navClick.bind(this),
-      toggled: this.props.toggled,
       dropDown: ''
     }
   }
 
   navClick = (event) => {
       const nav = document.getElementById('nav-icon').classList;
-      console.log(nav);
       nav.toggle('open');
       if(nav.contains('open')){
         this.props.toggleNav(true);
