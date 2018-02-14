@@ -16,6 +16,7 @@ export default class Home extends Component {
 
     return (
       <div className="page" id="home">
+      <div className="mobile-block"></div>
         <div className="flex flex-row-reverse home-banner container">
 
 

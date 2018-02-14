@@ -41,7 +41,7 @@ export const ReviewsData = [
     title: 'REVIEW PROCESS',
     desc: 'The review process involves an independent fee appraiser from the beginning of the process working alongside the appraiser and the agency to assure that all appropriate standards and regulations are followed.',
     desc2: 'The review appraiser does not substitute her judgment for that of the appraiser on questions of value, but does provide an independent means of verifying that the report is free from errors and has conformed to conventional appraisal practice and meets the standards of the agency.',
-    imgUrl: require('../img/litigation.jpg'),
+    imgUrl: require('../img/img-6.jpg'),
     btn: ''
   },
   {
@@ -62,7 +62,7 @@ export const ConsultingData = [
     title: 'WHAT WE OFFER',
     desc: 'The review process involves an independent fee appraiser from the beginning of the process working alongside the appraiser and the agency to assure that all appropriate standards and regulations are followed. The review appraiser does not substitute her judgment for that of the appraiser on questions of value, but does provide an independent means of verifying that the report is free from errors and has conformed to conventional appraisal practice and meets the standards of the agency.',
     desc2: '',
-    imgUrl: require('../img/litigation.jpg'),
+    imgUrl: require('../img/cle-clinic.jpg'),
     btn: ''
   },
   {
@@ -101,7 +101,7 @@ export const LitigationData = [
     class: 'page-section-1 flex',
     desc: 'C. P. Braman & Co. Inc. provides appraisal services for litigation proceedings. We have been involved in litigation for condemnation, tax assessment, property damage due to underground gas deposits, and zoning issues.',
     desc2: 'Emily Braman, MAI, SRA, AI-GRS was recently appointed as a Commissioner to the Federal Court in a case involving the value of underground natural gas storage rights. As one of three Commissioners she heard, deliberated and made a recommendation to Federal Magistrate Judge Thomas Parker. This experience enhanced her knowledge of the role of a valuation witness in litigation. We are available to consult with attorneys regarding proper appraisal practices, direct and cross examination questions and provide forensic appraisal review services.',
-    imgUrl: require('../img/litigation.jpg'),
+    imgUrl: require('../img/img-12.mv4'),
     btn: ''
   },
   {
